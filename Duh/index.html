@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="body">
+    
+<h1 class="title">Clicking simulator thingy lol</h1>
+<div onclick="clickfunction()" class="image-div"><img id="image" class="image" src="Images/ImageA.png"></div>
+<p id="value" class="value">Value</p>
+
+<div class="admin-button-div"><button onclick="buttonclickfunction()">Admin menu</button></div>
+<div class="refresh-website-div"><button onclick="buttonbclickfunction()">Refresh website</button></div>
+
+</body>
+
+<script>
+
+var clickvalue = false;
+var clickvalueb = 0;
+
+function buttonbclickfunction(){
+
+window.location.reload();
+
+}
+
+function buttonclickfunction(){
+
+var entervalue = window.prompt("Enter value");
+
+if(entervalue >= 1){
+
+console.log(entervalue);
+clickvalueb = entervalue;
+document.getElementById("value").innerHTML = ("Clicks: " + clickvalueb);
+
+}
+
+}
+    
+function clickfunction(){
+
+if(clickvalue == false){
+
+console.log("Clicked");
+document.getElementById("image").src = ('Images/ImageB.png');
+clickvalue = true;
+console.log(clickvalue);
+
+clickvalueb = clickvalueb + 1;
+console.log(clickvalueb);
+
+document.getElementById("value").innerHTML = ("Clicks: " + clickvalueb);
+
+}else{
+
+document.getElementById("image").src = ('Images/ImageA.png')
+clickvalue = false;
+console.log(clickvalue);
+
+clickvalueb = clickvalueb + 1;
+console.log(clickvalueb);
+
+document.getElementById("value").innerHTML = ("Clicks: " + clickvalueb);
+
+}
+
+}
+
+/*duh*/
+
+</script>
+
+<style>
+
+.title{
+
+margin-top: 8em;
+text-align: center;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+color: white;
+
+}
+
+.value{
+
+text-align: center;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+color: white;
+
+}
+
+.body{
+
+background-color: #1A1A1A;
+
+}
+
+.image-div{
+
+text-align: center;
+
+}
+
+.image{
+
+width: 15em;
+cursor: pointer;
+
+}
+
+.admin-button-div{
+
+text-align: center;
+
+}
+
+.refresh-website-div{
+
+text-align: center;
+margin-top: 1em;
+
+}
+
+</style>
+</html>
