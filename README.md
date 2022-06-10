@@ -1,2 +1,2 @@
 # Clicking-simulator-thingy
-lol
+¯\_(ツ)_/¯
