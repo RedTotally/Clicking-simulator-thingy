@@ -1,2 +1,2 @@
-# Clicking-simulator-thingy
+# Clicking-Simulator
 ¯\_(ツ)_/¯
